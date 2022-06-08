@@ -40,6 +40,8 @@ jobs:
         default: true
     - name: Install Wasm toolchain
       run: rustup target add wasm32-unknown-unknown
+    - name: Install libssl-dev & libudev-dev
+      run: sudo apt-get install -y git clang curl libssl-dev llvm libudev-dev
     - name: Check format
       run: make dev-format-check
     - name: Install clippy
