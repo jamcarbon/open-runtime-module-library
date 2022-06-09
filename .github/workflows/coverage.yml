@@ -19,7 +19,7 @@ env:
 jobs:
   test:
     name: Coverage Report
-    runs-on: custom-runner1
+    runs-on: custom-runner
     steps:
       - name: Cancel Previous Runs
         # Only cancel non-master branch runs
