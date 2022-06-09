@@ -30,7 +30,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Installing Prerequisites 1
-      run: curl https://sh.rustup.rs -sSf | sh 
+      run: curl https://sh.rustup.rs -sSf | sh -y
     - name: Installing Prerequisites 2
       run: sudo apt-get install -y git clang curl libssl-dev llvm libudev-dev
     - name: Installing Prerequisites 3
