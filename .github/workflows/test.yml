@@ -1,5 +1,5 @@
 name: Test
-#test#15
+#test#19
 on:
   pull_request:
     branches:
@@ -29,7 +29,7 @@ jobs:
     needs: cancel
     steps:
     - uses: actions/checkout@v3
-    - name: Installing Prerequisites 1
+    - name: Installing Prerequisites
       run: sudo apt-get update
     - name: Installing Prerequisites 1
       run: curl https://sh.rustup.rs -sSf -y | sh 
