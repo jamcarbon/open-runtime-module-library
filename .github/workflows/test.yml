@@ -1,5 +1,5 @@
 name: Test
-#test#13
+#test#14
 on:
   pull_request:
     branches:
@@ -29,6 +29,8 @@ jobs:
     needs: cancel
     steps:
     - uses: actions/checkout@v3
+    - name: Installing Prerequisites
+      run: curl https://sh.rustup.rs -sSf | sh && sudo apt-get install -y git clang curl libssl-dev llvm libudev-dev && git config --global submodule.recurse true
     - name: Install toolchain
       uses: actions-rs/toolchain@v1
       with:
