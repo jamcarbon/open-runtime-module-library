@@ -1,5 +1,5 @@
 name: Test
-#test#20
+#test#24
 on:
   pull_request:
     branches:
@@ -9,7 +9,7 @@ on:
   push:
     branches:
       - master
-    paths-ignore:
+    paths-ignore:ß
       - '**/README.md'
 
 jobs:
