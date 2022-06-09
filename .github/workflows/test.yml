@@ -30,7 +30,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Installing Prerequisites 1
-      run: sudo apt-get update && sudo apt-get upgrade
+      run: sudo apt-get update
     - name: Installing Prerequisites 1
       run: curl https://sh.rustup.rs -sSf -y | sh 
     - name: Installing Prerequisites 2
