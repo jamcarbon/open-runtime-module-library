@@ -9,7 +9,7 @@ on:
   push:
     branches:
       - master
-    paths-ignore:ß
+    paths-ignore:
       - '**/README.md'
 
 jobs:
