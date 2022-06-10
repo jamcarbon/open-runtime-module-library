@@ -57,9 +57,9 @@ jobs:
           target: wasm32-unknown-unknown
           default: true
       
-      - uses: actions/checkout@v2
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+      #- uses: actions/checkout@v2
+      #- name: Setup tmate session
+      #  uses: mxschmitt/action-tmate@v3
 
       - name: Generate code coverage
         run: |
