@@ -1,5 +1,5 @@
 name: Test
-#test#30
+#test#31
 on:
   pull_request:
     branches:
@@ -23,7 +23,7 @@ jobs:
         with:
           access_token: ${{ github.token }}
   build:
-    runs-on: custom-runner
+    runs-on: custom-runner1
     env:
       SCCACHE_CACHE_SIZE: "50G"
     needs: cancel
