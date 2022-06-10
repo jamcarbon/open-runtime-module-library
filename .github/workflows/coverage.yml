@@ -32,9 +32,7 @@ jobs:
           df -h
           curl -s https://raw.githubusercontent.com/apache/flink/master/tools/azure-pipelines/free_disk_space.sh | bash
 
-      #- uses: actions/checkout@v2
-      #- name: Setup tmate session
-      #  uses: mxschmitt/action-tmate@v3
+      
 
       - name: Installing Prerequisites
         run: sudo apt-get update
@@ -58,6 +56,11 @@ jobs:
           components: rustfmt
           target: wasm32-unknown-unknown
           default: true
+      
+      - uses: actions/checkout@v2
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Generate code coverage
         run: |
           wget https://github.com/xd009642/tarpaulin/releases/download/${{ env.TARPAULIN_VERSION }}/cargo-tarpaulin-${{ env.TARPAULIN_VERSION }}-travis.tar.gz
