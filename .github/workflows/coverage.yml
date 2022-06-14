@@ -57,14 +57,14 @@ jobs:
           target: wasm32-unknown-unknown
           default: true
       
-      - uses: actions/checkout@v2
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+      #- uses: actions/checkout@v2
+      #- name: Setup tmate session
+      #  uses: mxschmitt/action-tmate@v3
       
-      - name: openssl
-        run: 
-          export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64
-          sudo ldconfig
+      #- name: openssl
+      #  run: 
+      #    export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64
+      #    sudo ldconfig
 
       - name: Generate code coverage
         run: |
