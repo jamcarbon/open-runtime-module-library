@@ -63,8 +63,7 @@ jobs:
       
       - name: openssl
         run: 
-          openssl version
-          which openssl
+          
           
           sudo apt install -y  openssl11-libs
           
