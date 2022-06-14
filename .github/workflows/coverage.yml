@@ -63,12 +63,18 @@ jobs:
       
       - name: openssl
         run: 
-          
-          
-          sudo apt install -y  openssl11-libs
-          
-          export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64
-          sudo ldconfig
+          cd /tmp
+          wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/openssl/1.1.1l-1ubuntu1.3/openssl_1.1.1l.orig.tar.gz
+          tar -xvf openssl_1.1.1l.orig.tar.gz
+          sudo apt install libssl-dev liblzo2-dev libam0g-dev
+          cd openssl_1.1.1l/
+          ./config shared enable-ec_nistp_64_gcc_128 -Wl,-rpath=/usr/local/ssl/lib --prefix=/usr/local/ssl
+          make -j 4
+          make test
+          make install
+          hash -r
+          /usr/local/ssl/bin/openssl --version
+          sudo ln -s /usr/local/ssl/bin/openssl /usr/local/bin/openssl
 
       - name: Generate code coverage
         run: |
