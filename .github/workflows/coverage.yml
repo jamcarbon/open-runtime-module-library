@@ -56,8 +56,6 @@ jobs:
           components: rustfmt
           target: wasm32-unknown-unknown
           default: true
-          environment:
-            RUSTFLAGS: --cfg procmacro2_semver_exempt
       
       #- uses: actions/checkout@v2
       #- name: Setup tmate session
