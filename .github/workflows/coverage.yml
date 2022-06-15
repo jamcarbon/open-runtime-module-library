@@ -14,12 +14,12 @@ on:
       - '**/README.md'
 
 env:
-  TARPAULIN_VERSION: 0.19.1
+  TARPAULIN_VERSION: 0.20.1
 
 jobs:
   test:
     name: Coverage Report
-    runs-on: custom-runner1
+    runs-on: custom-runner
     steps:
       - name: Cancel Previous Runs
         # Only cancel non-master branch runs
