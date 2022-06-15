@@ -72,8 +72,6 @@ jobs:
           tar -zxvf cargo-tarpaulin-${{ env.TARPAULIN_VERSION }}-travis.tar.gz -C $HOME/.cargo/bin
           make Cargo.toml
           cargo tarpaulin --verbose --no-fail-fast --workspace --timeout 300 --out Xml
-          environment:
-            RUSTFLAGS: --cfg procmacro2_semver_exempt
       - name: Upload to codecov.io
         uses: codecov/codecov-action@v2
         with:
