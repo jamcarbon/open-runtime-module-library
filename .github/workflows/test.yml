@@ -1,5 +1,5 @@
 name: Test
-#test#24
+#test#26
 on:
   pull_request:
     branches:
@@ -62,3 +62,5 @@ jobs:
       run: make dev-check
     - name: Run tests
       run: make dev-test
+    - name: wait
+      run: sleep 9999
