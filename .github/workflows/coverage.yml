@@ -19,7 +19,7 @@ env:
 jobs:
   test:
     name: Coverage Report
-    runs-on: custom-runner1
+    runs-on: custom-runner-repo
     steps:
       - name: Cancel Previous Runs
         # Only cancel non-master branch runs
@@ -76,5 +76,5 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
           fail_ci_if_error: true
-      - name: wait
-      run: sleep 9999
+      #- name: wait
+      #  run: sleep 9999
