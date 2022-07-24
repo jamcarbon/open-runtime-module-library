@@ -1,5 +1,5 @@
 name: Test
-#PhillipsLab test#2
+#PhillipsLab test#5
 on:
   pull_request:
     branches:
@@ -30,11 +30,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Installing Prerequisites
-      run: sudo apt-get update
+      run: yum apt-get update
     - name: Installing Prerequisites 1
       run: curl https://sh.rustup.rs -sSf -y | sh 
     - name: Installing Prerequisites 2
-      run: sudo apt-get install -y git clang curl libssl-dev llvm libudev-dev
+      run: yum apt-get install -y git clang curl libssl-dev llvm libudev-dev
     - name: Installing Prerequisites 3
       run: git config --global submodule.recurse true
     - name: Installing Prerequisites 4
