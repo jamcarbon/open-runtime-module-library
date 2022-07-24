@@ -1,5 +1,5 @@
 name: Test
-#PhillipsLab test#5
+#PhillipsLab test#6
 on:
   pull_request:
     branches:
@@ -30,7 +30,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Installing Prerequisites
-      run: yum apt-get update
+      run: yum update
     - name: Installing Prerequisites 1
       run: curl https://sh.rustup.rs -sSf -y | sh 
     - name: Installing Prerequisites 2
